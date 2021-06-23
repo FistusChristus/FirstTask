@@ -1,0 +1,180 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+button {
+    outline: none;
+}
+
+#notifs img {
+    margin-left: 15px
+}
+
+#notifs {
+    padding: 7px 0;
+}
+
+#notifs button {
+    padding: 0.1px 2px;
+    background-color: transparent;
+    color: slategrey;
+    border-color: slategrey
+}
+
+#navs {
+    margin-top:20px;
+}
+
+#navs img + img {
+   margin-left: 15px;
+}
+
+.arr {
+    vertical-align: middle;
+}
+.arr--left {
+    transform: rotate(180deg);
+}
+
+.arr img {
+    width: 50px;
+    height: 50px;
+}
+
+.main {
+    padding: 190px 0 !important;
+    position: relative;
+}
+
+.dec1 {
+    width: 180px;
+    height: 200px;
+    position: absolute;
+    background-image: linear-gradient(to bottom, lightskyblue, white);
+    right: 0;
+    top: 0;
+    opacity: 0.7;
+}
+
+.dec2 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-image: linear-gradient(to bottom, lightskyblue, white);
+    right: 110px;
+    top: 125px;
+    opacity: 0.7;
+}
+
+.dec3 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-image: linear-gradient(to bottom, lightskyblue, white);
+    right: 180px;
+    top: 195px;
+    opacity: 0.7;
+}
+
+.links-wrapper a {
+    color: slategrey;
+    align-items: end;
+    margin-left: 40px;
+}
+
+.cube-wrapper {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+}
+
+.cube-wrapper-right {
+    top: 0;
+    right: 0;
+}
+
+.cube-wrapper-left {
+    bottom: 0;
+    left: 0;
+    transform: scale(-1, -1);
+}
+
+.learn button {
+    border-color: lightskyblue;
+    color: deepskyblue;
+}
+
+.ads p {
+    font-size: small;
+    color: slategrey;
+}
+
+.description {
+    font-size: x-large;
+}

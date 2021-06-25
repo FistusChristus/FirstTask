@@ -20,6 +20,8 @@ namespace FirstTask.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Projects = new List<String> { "UNIVERSITY", "AUTO", "MESSENGER", "CALENDAR", "IT SERVICES", "DESIGN", "WORKSPACE", "GOVERNMENT SERVICES", "GAMES", "CHARITABLE FOUNDATION", "PLANNER", "COVID 19" };
+
             return View();
         }
 

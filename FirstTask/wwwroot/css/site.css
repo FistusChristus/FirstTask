@@ -5,10 +5,6 @@ html {
     min-height: 100%;
 }
 
-body {
-    /* Margin bottom by footer height */
-    margin-bottom: 60px;
-}
 
 .footer {
     position: absolute;
@@ -25,9 +21,6 @@ a.navbar-brand {
 }
 
 /* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
-}
 
 .btn-primary {
   color: #fff;
@@ -52,16 +45,6 @@ html {
   }
 }
 
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
 
 button.accept-policy {
   font-size: 1rem;
@@ -112,42 +95,6 @@ button {
     position: relative;
 }
 
-.dec1 {
-    width: 180px;
-    height: 200px;
-    position: absolute;
-    background-image: linear-gradient(to bottom, lightskyblue, white);
-    right: 0;
-    top: 0;
-    opacity: 0.7;
-}
-
-.dec2 {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    background-image: linear-gradient(to bottom, lightskyblue, white);
-    right: 110px;
-    top: 125px;
-    opacity: 0.7;
-}
-
-.dec3 {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    background-image: linear-gradient(to bottom, lightskyblue, white);
-    right: 180px;
-    top: 195px;
-    opacity: 0.7;
-}
-
-.links-wrapper a {
-    color: slategrey;
-    align-items: end;
-    margin-left: 40px;
-}
-
 .cube-wrapper {
     position: absolute;
     width: 250px;
@@ -165,16 +112,49 @@ button {
     transform: scale(-1, -1);
 }
 
+.cube {
+    position: absolute;
+    background-image: linear-gradient(to bottom, lightskyblue, white);
+    opacity: 0.7;
+}
+
+.cube1 {
+    width: 180px;
+    height: 200px;
+    right: 0;
+    top: 0;
+}
+
+.cube2 {
+    width: 100px;
+    height: 100px;
+    right: 110px;
+    top: 125px;
+}
+
+.cube3 {
+    width: 50px;
+    height: 50px;
+    right: 180px;
+    top: 195px;
+    }
+
+.links-wrapper a {
+    color: slategrey;
+    align-items: end;
+    margin-left: 80px;
+}
+
 .learn button {
     border-color: lightskyblue;
     color: deepskyblue;
 }
 
-.ads p {
-    font-size: small;
+.projects p {
+    font-size: 12px;
     color: slategrey;
 }
 
 .description {
-    font-size: x-large;
+    font-size: 25px;
 }

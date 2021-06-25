@@ -1,0 +1,3 @@
+.vs/
+FirstTask/bin
+FirstTask/obj

@@ -12,16 +12,16 @@
         <div class="cube cube3"></div>
     </div>
     <div class="container-fluid">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-2 arr arr--left align-self-center">
+        <div class="row justify-content-between justify-content-md-center align-items-center">
+            <div class="col-2 col-md-2 arr arr--left align-self-center">
                 <img src="~/img/arr_right.png" />
             </div>
-            <div class="col-3 text-center">
+            <div class="col-8 col-md-3 text-center">
                 <h1>LOREM IPSUM</h1>
                 <h2>$9 000 000</h2>
                 <p class="description">Amet minim mollit</p>
             </div>
-            <div class="col-2 arr align-self-center">
+            <div class="col-2 col-md-2 arr align-self-center">
                 <img src="~/img/arr_right.png" />
             </div>
         </div>
@@ -29,7 +29,7 @@
             <div class="row align-items-center justify-content-center projects-wrapper">
                 @foreach (string project in ViewBag.Projects)
                 {
-                    <div class="col-2 offset-1 projects">
+                    <div class="col-3 col-md-2 offset-md-1 projects">
                         <p>@project</p>
                     </div>
                 }

@@ -55,27 +55,23 @@ button {
     outline: none;
 }
 
-#notifs img {
-    margin-left: 15px
+.notifs img {
+    margin-left: 15px;
 }
 
-#notifs {
+.notifs {
     padding: 7px 0;
 }
 
-#notifs button {
+.notifs button {
     padding: 0.1px 2px;
     background-color: transparent;
     color: slategrey;
     border-color: slategrey
 }
 
-#navs {
-    margin-top:20px;
-}
-
-#navs img + img {
-   margin-left: 15px;
+.navs {
+    margin-top:10px;
 }
 
 .arr {
@@ -114,7 +110,7 @@ button {
 
 .cube {
     position: absolute;
-    background-image: linear-gradient(to bottom, lightskyblue, white);
+    background-image: linear-gradient(to bottom, #87CEFA, #fff);
     opacity: 0.7;
 }
 
@@ -123,6 +119,7 @@ button {
     height: 200px;
     right: 0;
     top: 0;
+    background: linear-gradient( 180deg, rgba(123, 215, 254, 0.6) 0%, rgba(255, 255, 255, 0) 100%), rgba(135, 243, 254, 0.2);
 }
 
 .cube2 {
@@ -130,6 +127,7 @@ button {
     height: 100px;
     right: 110px;
     top: 125px;
+    background: linear-gradient( 180deg, rgba(123, 215, 254, 0.2) 0%, rgba(255, 255, 255, 0) 100%), rgba(135, 243, 254, 0.1);
 }
 
 .cube3 {
@@ -137,22 +135,57 @@ button {
     height: 50px;
     right: 180px;
     top: 195px;
+    background: linear-gradient( 180deg, rgba(123, 215, 254, 0.2) 0%, rgba(255, 255, 255, 0) 100%), rgba(135, 243, 254, 0.05);
+}
+
+@media screen and (max-width: 768px) {
+    .cube-wrapper {
+        position: absolute;
+        width: 150px;
+        height: 150px;
     }
 
+    .cube1 {
+        width: 90px;
+        height: 100px;
+        right: 0;
+        top: 0;
+        background: linear-gradient( 180deg, rgba(123, 215, 254, 0.6) 0%, rgba(255, 255, 255, 0) 100%), rgba(135, 243, 254, 0.2);
+    }
+
+    .cube2 {
+        width: 50px;
+        height: 50px;
+        right: 55px;
+        top: 65px;
+        background: linear-gradient( 180deg, rgba(123, 215, 254, 0.2) 0%, rgba(255, 255, 255, 0) 100%), rgba(135, 243, 254, 0.1);
+    }
+
+    .cube3 {
+        width: 25px;
+        height: 25px;
+        right: 90px;
+        top: 110px;
+        background: linear-gradient( 180deg, rgba(123, 215, 254, 0.2) 0%, rgba(255, 255, 255, 0) 100%), rgba(135, 243, 254, 0.05);
+    }
+}
+
 .links-wrapper a {
-    color: slategrey;
+    color: #708090;
     align-items: end;
-    margin-left: 80px;
+    font-size: 12px;
+    font-weight:bold;
+    padding: 0 7px;
 }
 
 .learn button {
-    border-color: lightskyblue;
-    color: deepskyblue;
+    border-color: #87CEFA;
+    color: #00bfff;
 }
 
 .projects p {
     font-size: 12px;
-    color: slategrey;
+    color: #708090;
 }
 
 .description {

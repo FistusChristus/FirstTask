@@ -7,11 +7,11 @@ using FirstTask.Models.DbModels;
 
 namespace FirstTask.Data
 {
-    public class ApplicationContext : DbContext
+    public class ApplicationDbContext : DbContext
     {
         public DbSet<Project> Projects { get; set; }
 
-        public ApplicationContext(DbContextOptions<ApplicationContext> options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
             //Database.EnsureCreated();

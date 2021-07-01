@@ -15,24 +15,24 @@ namespace FirstTask.Controllers
     public class HomeController : Controller
     {
 
-        private ApplicationContext db;
+        private ApplicationDbContext _dbContext;
 
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger, ApplicationContext context)
+        public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
         {
             _logger = logger;
-            db = context;
+            _dbContext = context;
         }
 
         public async Task<IActionResult> Index()
         {
-            return View(await db.Projects.ToListAsync());
+            return View(await _dbContext.Projects.AsNoTracking().ToArrayAsync());
         }
 
         public async Task<IActionResult> Projects()
         {
-            return View(await db.Projects.ToListAsync());
+            return View(await _dbContext.Projects.ToListAsync());
         }
 
         public IActionResult Create()
@@ -43,8 +43,8 @@ namespace FirstTask.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Project project)
         {
-            await db.Projects.AddAsync(project);
-            await db.SaveChangesAsync();
+            await _dbContext.Projects.AddAsync(project);
+            await _dbContext.SaveChangesAsync();
             return RedirectToAction("Index");
         }
 
@@ -52,7 +52,7 @@ namespace FirstTask.Controllers
         {
             if (id != null)
             {
-                Project project = await db.Projects.FirstOrDefaultAsync(p => p.Id == id);
+                Project project = await _dbContext.Projects.AsNoTracking().FirstOrDefaultAsync(p => p.Id == id);
                 if (project != null)
                     return View(project);
             }
@@ -62,8 +62,8 @@ namespace FirstTask.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(Project project)
         {
-            db.Projects.Update(project);
-            await db.SaveChangesAsync();
+            _dbContext.Projects.Update(project);
+            await _dbContext.SaveChangesAsync();
             return RedirectToAction("Index");
         }
 
@@ -73,7 +73,7 @@ namespace FirstTask.Controllers
         {
             if (id != null)
             {
-                Project project = await db.Projects.FirstOrDefaultAsync(p => p.Id == id);
+                Project project = await _dbContext.Projects.AsNoTracking().FirstOrDefaultAsync(p => p.Id == id);
                 if (project != null)
                     return View(project);
             }
@@ -85,11 +85,11 @@ namespace FirstTask.Controllers
         {
             if (id != null)
             {
-                Project project = await db.Projects.FirstOrDefaultAsync(p => p.Id == id);
+                Project project = await _dbContext.Projects.FirstOrDefaultAsync(p => p.Id == id);
                 if (project != null)
                 {
-                    db.Projects.Remove(project);
-                    await db.SaveChangesAsync();
+                    _dbContext.Projects.Remove(project);
+                    await _dbContext.SaveChangesAsync();
                     return RedirectToAction("Index");
                 }
             }

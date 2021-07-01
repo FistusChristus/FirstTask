@@ -191,3 +191,9 @@ button {
 .description {
     font-size: 25px;
 }
+
+.projects-row a+a {
+    padding-left: 50px;
+}
+
+

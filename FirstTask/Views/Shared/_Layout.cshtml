@@ -14,21 +14,36 @@
                 <div class="col-1 col-md-1">
                     <img src="~/img/search.png" width="15" height="15" />
                 </div>
-                <div class="col-8 col-md-2 offset-md-8">
+                <div class="col-8 col-md-2 offset-md-7">
                     <img src="~/img/supp.png" width="25" height="15" />
                     <img src="~/img/notif.png" width="17" height="17" />
                     <img src="~/img/deals.jpg" width="25" height="15" />
                     <img src="~/img/web.png" width="17" height="17" />
                     <img src="~/img/other.png" width="20" height="17" />
                 </div>
-                <nav class="col-3 col-md-1">
-                    <button value="SIGN IN">SIGN IN</button>
-                </nav>
+                @if (User.Identity.IsAuthenticated)
+                {
+            <nav class="col-3 col-md-2 align-items-center">
+                @User.Identity.Name
+                <form method="post" asp-controller="account" asp-action="logout">
+
+            <button type="submit" value="выход">logout</button>
+            </form>
+                @*<a asp-action="Logout" asp-controller="Account" class="btn btn-outline-dark btn-sm">Logout</a>*@
+            </nav>
+                }
+                else
+                {
+            <nav class="col-3 col-md-2">
+                        <a class="btn btn-outline-dark btn-sm" asp-controller="Account" asp-action="Login">SIGN IN</a>
+                        <a class="btn btn-outline-dark btn-sm" asp-controller="Account" asp-action="Register">SIGN UP</a>
+            </nav>
+                }
             </div>
             <nav class="navbar bg-white pr-0 navs">
-                <div class="col-1 col-md-2"><img src="~/img/astin.png" width="40" height="30" /></div>
+                <div class="col-1 col-md-2"><a asp-action="Index" asp-controller="Home"><img src="~/img/astin.png" width="40" height="30" /></a></div>
                 <div class="col-8 offset-3 col-md-2 offset-md-8 links-wrapper">
-                    <a asp-action="Index">HOME</a>     <a href="#">ABOUT US</a>     <a href="#">CONTACTS</a>
+                    <a asp-action="Index" asp-controller="Home">HOME</a>     <a href="#">ABOUT US</a>     <a href="#">CONTACTS</a>
                 </div>
             </nav>
         </div>

@@ -1,0 +1,17 @@
+﻿@model FirstTask.Models.ViewModels.ChangeRoleViewModel
+
+    <div class="container text-center">
+        <h2>Изменение ролей для пользователя @Model.UserEmail</h2>
+
+        <form asp-action="Edit" method="post">
+            <input type="hidden" name="userId" value="@Model.UserId" />
+            <div class="form-group">
+                @foreach (var role in Model.RoleNames)
+                {
+                    <input type="checkbox" name="roles" value="@role"
+                           @(Model.UserRoles.Contains(role) ? "checked=\"checked\"" : "") />@role <br />
+                    }
+            </div>
+            <button type="submit" class="btn btn-primary">Сохранить</button>
+        </form>
+    </div>

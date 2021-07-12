@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using FirstTask.Data;
 using FirstTask.Models.ViewModels;
+using FirstTask.Models.DbModels;
 
 namespace CustomIdentityApp.Controllers
 {

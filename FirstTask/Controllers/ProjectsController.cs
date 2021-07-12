@@ -29,7 +29,7 @@ namespace FirstTask.Controllers
 
         public async Task<IActionResult> Projects()
         {
-            return View(await _dbContext.Projects.ToListAsync());
+            return View(await _dbContext.Projects.AsNoTracking().ToArrayAsync());
         }
 
         public IActionResult Create()

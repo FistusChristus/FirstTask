@@ -8,6 +8,7 @@ using FirstTask.Models.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace FirstTask.Controllers
 {
@@ -21,7 +22,7 @@ namespace FirstTask.Controllers
             _roleManager = roleManager;
             _userManager = userManager;
         }
-        public IActionResult Index() => View(_roleManager.Roles.ToList());
+        public IActionResult Index() => View(_roleManager.Roles.AsNoTracking().ToArray());
 
         public IActionResult Create() => View();
         [HttpPost]
@@ -89,7 +90,7 @@ namespace FirstTask.Controllers
                 // получем список ролей пользователя
                 var userRoles = await _userManager.GetRolesAsync(customUser);
                 // получаем все роли
-                var allRoles = _roleManager.Roles.ToList();
+                var allRoles = _roleManager.Roles.AsNoTracking().ToArray();
                 // получаем список ролей, которые были добавлены
                 var addedRoles = roles.Except(userRoles);
                 // получаем роли, которые были удалены

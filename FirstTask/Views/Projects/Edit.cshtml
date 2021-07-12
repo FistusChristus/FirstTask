@@ -3,7 +3,7 @@
     ViewBag.Title = "Редактирование проекта";
 }
     <div class="container">
-        <form asp-action="edit" asp-controller="home">
+        <form asp-action="edit" asp-controller="Projects">
             <input type="hidden" asp-for="Id" value="@Model.Id" />
             <div class="form-group">
                 <label asp-for="Name" class="control-label">Название</label>

@@ -6,7 +6,7 @@
 }
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-2"><a asp-action="Create">Добавить проект</a></div>
+            <div class="col-2"><a asp-action="Create" asp-controller="Projects">Добавить проект</a></div>
         </div>
         <table class="table">
             <tbody>
@@ -15,8 +15,8 @@
                     <tr class="projects-row">
                         <td scope="row">@project.Name</td>
                         <td>
-                            <a asp-action="Edit" asp-controller="Home" asp-route-id="@project.Id">Изменить</a>
-                            <a asp-action="Delete" asp-controller="Home" asp-route-id="@project.Id">Удалить</a>
+                            <a asp-action="Edit" asp-controller="Projects" asp-route-id="@project.Id">Изменить</a>
+                            <a asp-action="Delete" asp-controller="Projects" asp-route-id="@project.Id">Удалить</a>
                         </td>
                     </tr>
                 }

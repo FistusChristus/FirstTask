@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FirstTask.Data;
+using FirstTask.Models.DbModels;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -30,6 +32,8 @@ namespace FirstTask
             // добавляем контекст MobileContext в качестве сервиса в приложение
             services.AddDbContext<Data.ApplicationDbContext>(options =>
                 options.UseSqlServer(connection));
+            services.AddIdentity<CustomUser, CustomRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
         }
 
@@ -51,6 +55,7 @@ namespace FirstTask
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
